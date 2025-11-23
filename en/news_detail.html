@@ -23,7 +23,6 @@
 
   gtag('config', 'G-GDLJ4DGHX9');
 </script>
-
 </head>
 <body>
 
@@ -67,9 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('../news.json')
     .then(res => res.json())
     .then(data => {
-      newsData = data;
-      renderNewsDetail();
-    });
+    // 날짜 기준 내림차순 정렬 (최신 글이 먼저)
+    newsData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderNewsDetail();
+  });
 
 function renderNewsDetail() {
   const detailContainer = document.getElementById('news-detail');
@@ -90,15 +90,15 @@ function renderNewsDetail() {
   navContainer.innerHTML = '';
 
   // 이전 글
-  if (currentIndex > 0) {
-    const prevLink = document.createElement('a');
-    prevLink.href = `news_detail.html?id=${newsData[currentIndex - 1].id}`;
-    prevLink.textContent = '◀ Previous';
-    navContainer.appendChild(prevLink);
+  if (currentIndex < newsData.length - 1) {
+  const prevLink = document.createElement('a');
+  prevLink.href = `news_detail.html?id=${newsData[currentIndex + 1].id}`;
+  prevLink.textContent = '◀ Previous';
+  navContainer.appendChild(prevLink);
   } else {
-    const span = document.createElement('span');
-    span.textContent = '◀ Previous';
-    navContainer.appendChild(span);
+  const span = document.createElement('span');
+  span.textContent = '◀ Previous';
+  navContainer.appendChild(span);
   }
 
   // 목록으로
@@ -108,14 +108,14 @@ function renderNewsDetail() {
   navContainer.appendChild(listLink);
 
   // 다음 글
-  if (currentIndex < newsData.length - 1) {
-    const nextLink = document.createElement('a');
-    nextLink.href = `news_detail.html?id=${newsData[currentIndex + 1].id}`;
-    nextLink.textContent = '\u00A0\u00A0\u00A0\u00A0Next ▶';
-    navContainer.appendChild(nextLink);
+  if (currentIndex > 0) {
+  const nextLink = document.createElement('a');
+  nextLink.href = `news_detail.html?id=${newsData[currentIndex - 1].id}`;
+  nextLink.textContent = '\u00A0\u00A0\u00A0\u00A0Next ▶';
+  navContainer.appendChild(nextLink);
   } else {
-    const span = document.createElement('span');
-    span.textContent = '\u00A0\u00A0\u00A0\u00A0Next ▶';
+  const span = document.createElement('span');
+  span.textContent = '\u00A0\u00A0\u00A0\u00A0Next ▶';
     navContainer.appendChild(span);
   }
 }
