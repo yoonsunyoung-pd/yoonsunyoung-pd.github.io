@@ -22,7 +22,7 @@
   {
     "id": 10,
     "date": "2022-09-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "선거제도 공론화 500인 회의",
     "title_en": "500-Person Deliberation on Electoral Reform",
@@ -42,7 +42,7 @@
   {
     "id": 11,
     "date": "2023-06-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "추적 60분",
     "title_en": "In Depth of 60 minutes",
@@ -52,8 +52,8 @@
       "Introduction": "<p>Chasing the truth through the lens of common sense.</p>\n<p>South Korea's first TV investigative program, airing since 1983.</p>\n<p>Source: KBS Official Website</p>\n",
       "정보": "<li>방송 채널 : KBS 1TV</li>\n<li>편성 : 1983년 첫 방송, 매주 금요일 22시</li>\n<li>참여 내용 : 연출 (2023~2025년)</li>\n",
       "Information": "<li>Channel: KBS 1TV</li>\n<li>Schedule: First aired in 1983 · Every Friday at 10 PM</li>\n<li>Role: Director (2023–2025)</li>\n",
-      "수상": "<li>2025년 3월 민주언론실천상 - '계엄의 기원' 2부작</li>\n",
-      "Awards": "<li>Democratic Journalism Award (March 2025) - 'The Origins of Martial Law', a two-part series</li>\n",
+      "수상": "<li>제35회 민주언론상 본상 (‘계엄의 기원’ 2부작)</li>\n<li>2025년 3월 민주언론실천상 (‘계엄의 기원’ 2부작)</li>\n",
+      "Awards": "<li>Democratic Journalism Award – Grand Prize, 35th (‘The Origins of Martial Law’)</li>\n<li>Democratic Journalism Award – March 2025 (‘The Origins of Martial Law’)</li>\n",
       "언론 보도": null,
       "Press": null,
       "미디어": null
@@ -62,7 +62,7 @@
   {
     "id": 12,
     "date": "2024-4-26",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "추적 60분 학교 밖 르포 - 소년은 혼자 자라지 않는다",
     "title_en": "A Haven for the Troubled",
@@ -82,7 +82,7 @@
   {
     "id": 13,
     "date": "2025-01-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "12.3 비상계엄 증언 채록 프로젝트 - 그날 그곳에 있었습니다",
     "title_en": "I Was There: Witnesses of the December 3 Martial Law",
@@ -92,8 +92,8 @@
       "Introduction": "<p>A project to document the memories of everyone who experienced the martial law on December 3rd. To ensure that the social memory of that day is neither lost nor distorted, the vivid voices of many people are recorded through interviews on video and preserved for future generations.</p>\n",
       "정보": "<li>공개 채널 : 유튜브 〈KBS 그날 그곳에 있었습니다〉</li>\n<li>업로드 일정 : 2025년 1월 ~ 현재, 수시 업로드</li>\n<li>참여 내용 : 연출</li>\n",
       "Information": "<li>Channel: YouTube 〈KBS I Was There That Day〉</li>\n<li>Upload schedule: January 2025 ~ present, uploaded intermittently</li>\n<li>Role: Director</li>\n",
-      "수상": "<li>2025년 5월 민주언론실천상</li>\n<li>301회 이달의 PD상 디지털콘텐츠 부문</li> \n",
-      "Awards": "<li>Democratic Journalism Award (May 2025)</li>\n<li>PD of the Month Award – Digital Content category, 301st</li>\n",
+      "수상": "<li>제35회 가톨릭미디어콘텐츠대상 뉴미디어 부문</li>\n<li>2025년 5월 민주언론실천상</li>\n<li>301회 이달의 PD상 디지털콘텐츠 부문</li> \n",
+      "Awards": "<li>Catholic Media Content Award – New Media category, 35th</li>\n<li>Democratic Journalism Award (May 2025)</li>\n<li>PD of the Month Award – Digital Content category, 301st</li>\n",
       "언론 보도": null,
       "Press": null,
       "미디어": null
@@ -102,7 +102,7 @@
   {
     "id": 2,
     "date": "2019-01-14",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "6시 내고향",
     "title_en": "Hometown at 6",
@@ -135,7 +135,7 @@
   {
     "id": 3,
     "date": "2019-03-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "덕화TV",
     "title_en": "Deokhwa TV",
@@ -175,7 +175,7 @@
   {
     "id": 5,
     "date": "2020-01-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "슬기로운 어른이 생활",
     "title_en": "The Wise Life of a Rookie Adult",
@@ -195,7 +195,7 @@
   {
     "id": 6,
     "date": "2020-04-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "생방송 아침이 좋다",
     "title_en": "Good Morning Live",
@@ -215,7 +215,7 @@
   {
     "id": 7,
     "date": "2020-10-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "시리즈 지식 다큐멘터리 링크",
     "title_en": "LINK: Knowledge Documentary Series",
@@ -248,7 +248,7 @@
   {
     "id": 8,
     "date": "2021-01-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "한밤의 시사토크 더 라이브",
     "title_en": "The Live: Late-Night Current Affairs Show",
@@ -268,7 +268,7 @@
   {
     "id": 9,
     "date": "2022-09-01",
-    "category": "영상",
+    "category": "방송·영상",
     "category_en": "TV & Video",
     "title": "종로사진관",
     "title_en": "Jongno Portrait Studio",
