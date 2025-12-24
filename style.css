@@ -516,6 +516,16 @@ nav { position:relative; }
 
 
 /* 소개 */
+.about-img {
+  width:100%;
+  max-width:500px;
+  margin:0 auto;
+}
+.about-img img {
+  width: 100%;
+  height:auto;
+  display:block;
+}
 .about-content {
   max-width: 900px;
   margin: 0 auto;
@@ -524,13 +534,15 @@ nav { position:relative; }
   font-size: 3em;
   margin: 1em 0 0.2em 0;
   font-weight: 900;
-  line-height:1em;
+  line-height: 1em;
+  text-align: center;
 }
 .about-content h3{
   font-size: 1.4em;
   margin: 0 0 1em 0;
   font-weight:700;
   line-height:1.2em;
+  text-align: center;
 }
 .about-content h4{
   font-size: 1.5em;
