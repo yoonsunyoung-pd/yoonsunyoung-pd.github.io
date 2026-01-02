@@ -28,10 +28,12 @@
 <body>
 
 <header>
-  <div class="logo">
-    <div class="kr">윤선영</div>
-    <div class="en"><p>YOON</p><p>SUNYOUNG</p></div>
-  </div>
+  <a href="index.html" class="logo-link">
+    <div class="logo">
+      <div class="kr">윤선영</div>
+      <div class="en"><p>YOON</p><p>SUNYOUNG</p></div>
+    </div>
+  </a>
   <nav>
     <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
     <ul class="menu">
@@ -55,9 +57,19 @@
     </div>
     <div class="slider-overlay"></div>
     <div class="slider-intro">
-    <h2>YOON SUNYOUNG</h2>
-    <p>I joined KBS in 2019 and have been working as a producer and television director. I mainly produce documentaries and current affairs programs, and under the pen name Yoon Jikwon, I also draw comics and write. All information related to my work can be found on this website.</p>
-    </div>
+      <div class="intro active">
+        <h2>That Day, I Was There</h2>
+        <p>Aired on KBS1 at 10:00 p.m. on December 3, 2025. Available for replay on the KBS website, Wavve, and YouTube.</p>
+      </div>
+      <div class="intro">
+        <h2>12.3 That Day, I Was There</h2>
+        <p>Available at bookstores nationwide, both online and offline.</p>
+      </div>
+      <div class="intro">
+        <h2>A Haven for the Troubled</h2>
+         <p>Aired on KBS1 at 10:00 p.m. on April 26, 2024. Available for replay on the KBS website, Wavve, and YouTube.</p>
+       </div>
+     </div>
     <button class="prev" aria-label="이전 슬라이드">‹</button>
     <button class="next" aria-label="다음 슬라이드">›</button>
     <div class="dots">
@@ -101,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // ------------------------------
   const slides = document.querySelectorAll('.slides img');
   const dots = document.querySelectorAll('.dot');
+  const intros = document.querySelectorAll('.slider-intro .intro');
   let currentIndex = 0;
   const slideIntervalTime = 10000;
 
@@ -108,6 +121,11 @@ document.addEventListener("DOMContentLoaded", function() {
     slides.forEach((slide,i)=>slide.classList.toggle('active', i===index));
     dots.forEach(dot=>dot.classList.remove('active'));
     dots[index].classList.add('active');
+
+    intros.forEach((intro, i) =>
+    intro.classList.toggle('active', i === index)
+    );
+
     currentIndex = index;
   }
 
