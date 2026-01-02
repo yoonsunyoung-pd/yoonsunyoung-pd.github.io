@@ -27,10 +27,12 @@
 <body>
 
 <header>
-  <div class="logo">
-    <div class="kr">윤선영</div>
-    <div class="en"><p>YOON</p><p>SUNYOUNG</p></div>
-  </div>
+  <a href="index.html" class="logo-link">
+    <div class="logo">
+      <div class="kr">윤선영</div>
+      <div class="en"><p>YOON</p><p>SUNYOUNG</p></div>
+    </div>
+  </a>
   <nav>
     <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
     <ul class="menu">
@@ -54,9 +56,19 @@
     </div>
     <div class="slider-overlay"></div>
     <div class="slider-intro">
-    <h2>윤선영 PD</h2>
-    <p>2019년 KBS에 입사하여 프로듀서, 방송 연출가로 일하고 있습니다. 다큐멘터리와 시사 프로그램을 주로 제작하고 있으며 윤직원이라는 필명으로 만화를 그리거나 글을 쓰기도 합니다. 제 작업과 관련된 모든 정보는 본 웹사이트에서 확인하실 수 있습니다.</p>
-    </div>
+      <div class="intro active">
+        <h2>그날 그곳에 있었습니다</h2>
+        <p>2025년 12월 3일 밤 10시, KBS1 방송. KBS 홈페이지, Wavve, 유튜브 등에서 다시 보실 수 있습니다.</p>
+      </div>
+      <div class="intro">
+        <h2>12.3 그날 그곳에 있었습니다</h2>
+        <p>전국 온오프라인 서점에서 구매하실 수 있습니다.</p>
+      </div>
+      <div class="intro">
+        <h2>소년은 혼자 자라지 않는다</h2>
+         <p>2024년 4월 26일 밤 10시, KBS1 방송. KBS 홈페이지, Wavve, 유튜브 등에서 다시 보실 수 있습니다.</p>
+       </div>
+     </div>
     <button class="prev" aria-label="이전 슬라이드">‹</button>
     <button class="next" aria-label="다음 슬라이드">›</button>
     <div class="dots">
@@ -99,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // ------------------------------
   const slides = document.querySelectorAll('.slides img');
   const dots = document.querySelectorAll('.dot');
+  const intros = document.querySelectorAll('.slider-intro .intro');
   let currentIndex = 0;
   const slideIntervalTime = 10000;
 
@@ -106,6 +119,11 @@ document.addEventListener("DOMContentLoaded", function() {
     slides.forEach((slide,i)=>slide.classList.toggle('active', i===index));
     dots.forEach(dot=>dot.classList.remove('active'));
     dots[index].classList.add('active');
+
+    intros.forEach((intro, i) =>
+      intro.classList.toggle('active', i === index)
+    );
+
     currentIndex = index;
   }
 
