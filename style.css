@@ -629,6 +629,10 @@ nav { position:relative; }
   height:50vh; 
   }
 
+  .slider-intro {
+  margin: 0 0 3em 0;
+}
+
   .slider-intro h2 {
   margin-bottom: 0.3em;
   font-size: 1.5em;
@@ -636,13 +640,24 @@ nav { position:relative; }
   font-family:"Gowun Batang", sans-serif;
   text-align: center;
   line-height: 1em;
-}
+  }
 
-.slider-intro p {
-  font-size: 1em;
-  text-align: center;
-  line-height: 1.5em;
-}
+  .slider-intro p {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .dot {
+    display:inline-block;
+    width:8px;
+    height:8px;
+    margin:0 3px;
+    background-color: rgba(225,225,225,0.5);
+    border-radius:50%;
+    cursor:pointer;
+    transition: background-color 0.3s;
+  }
 
   .news-item {
     display: flex;
