@@ -70,6 +70,27 @@
 </footer>
 
 <script>
+// 브라우저의 자동 스크롤 기능 차단
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// 스크롤 위치 가져오기 (내부 스크롤 발생 요소 범용 감지)
+function getScrollPos() {
+  const mainScroll = document.querySelector('main') ? document.querySelector('main').scrollTop : 0;
+  return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || mainScroll || 0;
+}
+
+// 스크롤 위치 설정하기 (내부 스크롤 발생 요소 범용 적용)
+function setScrollPos(pos) {
+  window.scrollTo(0, pos);
+  document.documentElement.scrollTop = pos;
+  document.body.scrollTop = pos;
+  if (document.querySelector('main')) {
+    document.querySelector('main').scrollTop = pos;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const workPerPage = 9;
   let currentCount = 0;
@@ -77,17 +98,46 @@ document.addEventListener("DOMContentLoaded", function() {
   const defaultThumb = './images/default_thumbnail.jpg';
 
   const container = document.getElementById('work-container');
-  const moreBtn = document.getElementById('more-work');
   const loadMoreLink = document.getElementById('load-more');
 
-  // JSON 불러오기
+  const params = new URLSearchParams(window.location.search);
+  const savedCategory = params.get('cat') || '전체';
+  const savedCount = parseInt(params.get('cnt'), 10) || workPerPage;
+  const savedScroll = parseInt(params.get('scroll'), 10) || 0;
+
+  let currentCategory = savedCategory;
+
+  document.querySelectorAll('.work-categories button').forEach(b => {
+    b.classList.remove('active');
+    if (b.dataset.category === currentCategory) b.classList.add('active');
+  });
+
   fetch('work.json')
     .then(res => res.json())
     .then(data => {
       workData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      renderWork();
+      
+      renderWork(currentCategory, savedCount);
+
+      // 문서 높이가 렌더링될 때까지 대기 후 스크롤 복원
+      if (savedScroll > 0) {
+        let attempts = 0;
+        const scrollInterval = setInterval(() => {
+          const mainHeight = document.querySelector('main') ? document.querySelector('main').scrollHeight : 0;
+          const maxScrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, mainHeight);
+          
+          if (maxScrollHeight > savedScroll || attempts > 20) {
+            setScrollPos(savedScroll); // 범용 스크롤 복원 함수 적용
+            clearInterval(scrollInterval);
+            
+            // 스크롤 복원 후 URL 정리
+            const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({}, document.title, cleanUrl);
+          }
+          attempts++;
+        }, 50);
+      }
     }).catch(err => {
-      console.error("work.json 불러오기 실패:", err);
       container.innerHTML = '<p>작업 데이터를 불러올 수 없습니다.</p>';
     });
 
@@ -98,15 +148,21 @@ document.addEventListener("DOMContentLoaded", function() {
     img.src = url;
   }
 
-  function renderWork(category='전체') {
+  function renderWork(category='전체', forceCount = null) {
     container.innerHTML = '';
     const filtered = category === '전체' ? workData : workData.filter(item => item.category === category);
-    const toShow = filtered.slice(0, currentCount + workPerPage);
+    
+    let limit = forceCount !== null ? forceCount : currentCount + workPerPage;
+    const toShow = filtered.slice(0, limit);
 
     toShow.forEach(item => {
       const div = document.createElement('div');
       div.className = 'work-item';
-      div.onclick = () => window.location.href=`work_detail.html?id=${item.id}`;
+      div.onclick = () => {
+        const currentScroll = getScrollPos(); // 범용 스크롤 감지 함수 적용
+        const stateParams = `cat=${encodeURIComponent(category)}&cnt=${toShow.length}&scroll=${currentScroll}`;
+        window.location.href = `work_detail.html?id=${item.id}&${stateParams}`;
+      };
 
       const thumb = document.createElement('div');
       thumb.className = 'thumbnail';
@@ -140,16 +196,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     currentCount = toShow.length;
-
-    // 기존 이벤트 제거
     loadMoreLink.onclick = null;
 
-    // 스크롤 존재 여부 확인
     const contentOverflows = container.scrollHeight > window.innerHeight;
 
-    // 버튼 조건 처리
     if(currentCount < filtered.length){
-      // 남은 데이터가 있으면 "더 보기"
       loadMoreLink.style.display = 'inline-block';
       loadMoreLink.textContent = "▼ 더 보기";
       loadMoreLink.onclick = (e) => {
@@ -157,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function() {
         renderWork(category);
       };
     } else if(currentCount >= filtered.length && contentOverflows){
-      // 모든 데이터를 다 불러왔고 스크롤이 있으면 "위로가기"
       loadMoreLink.style.display = 'inline-block';
       loadMoreLink.textContent = "▲ 위로 가기";
       loadMoreLink.onclick = (e) => {
@@ -165,23 +215,21 @@ document.addEventListener("DOMContentLoaded", function() {
         container.scrollIntoView({ behavior: "smooth", block: "start" });
       };
     } else {
-      // 모든 데이터를 다 불러왔고 스크롤도 없으면 버튼 숨김
       loadMoreLink.style.display = 'none';
     }
   }
 
-  // 카테고리 필터링
   document.querySelectorAll('.work-categories button').forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
       document.querySelectorAll('.work-categories button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCount = 0;
-      renderWork(btn.dataset.category);
+      currentCategory = btn.dataset.category;
+      renderWork(currentCategory);
     });
   });
 
-  // 모바일 메뉴
   const menuToggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
   const closeMenuBtn = document.querySelector('.close-menu');
@@ -192,30 +240,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const isClickInside = menu.contains(e.target) || menuToggle.contains(e.target);
     if(!isClickInside && menu.classList.contains('active')) menu.classList.remove('active');
   });
-  // ------------------------------
-  // 언어 전환 버튼 처리
-  // ------------------------------
-  const langSwitchBtns = document.querySelectorAll('.lang-switch');
 
+  const langSwitchBtns = document.querySelectorAll('.lang-switch');
   langSwitchBtns.forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
-
-      const path = window.location.pathname;  // 현재 경로
-      const search = window.location.search;  // 쿼리스트링 ?id=13 등
-      const fileName = path.split('/').pop(); // index.html, about.html 등
-
-      let targetPath = '';
-
-      // 현재 페이지가 영어(/en/)인지 확인
-      if (path.includes('/en/')) {
-        // 영어 → 한국어: 한 단계 위로 이동
-        targetPath = '../' + fileName;
-      } else {
-        // 한국어 → 영어: en/ 폴더 아래로 이동
-        targetPath = 'en/' + fileName;
-      }
-
+      const path = window.location.pathname;  
+      const search = window.location.search;  
+      const fileName = path.split('/').pop(); 
+      let targetPath = path.includes('/en/') ? '../' + fileName : 'en/' + fileName;
       window.location.href = targetPath + search;
     });
   });
