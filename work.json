@@ -36,7 +36,36 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/10-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/10-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/10-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/10-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -56,7 +85,43 @@
       "Awards": "<li>Democratic Journalism Award – Grand Prize, 35th (‘The Origins of Martial Law’)</li>\n<li>Democratic Journalism Award – March 2025 (‘The Origins of Martial Law’)</li>\n",
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/11-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/11-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/11-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/11-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/11-5.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -76,7 +141,57 @@
       "Awards": "<li>Korea Broadcasting Prizes – Current Affairs & TV Reporting, 51st</li>\n",
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/12-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-5.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-6.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/12-7.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -96,7 +211,15 @@
       "Awards": "<li>Catholic Media Content Award – New Media category, 35th</li>\n<li>Democratic Journalism Award (May 2025)</li>\n<li>PD of the Month Award – Digital Content category, 301st</li>\n",
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/13-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -116,7 +239,29 @@
       "Awards": "<li>Amnesty International Korea Media Award - 28th</li>\n",
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/14-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/14-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/14-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -140,6 +285,48 @@
     }
   },
   {
+    "id": 16,
+    "date": "2026-06-18",
+    "category": "방송·영상",
+    "category_en": "TV & Video",
+    "title": "다큐 인사이트 - 소설은 언제나 스무 살",
+    "title_en": "Docu Insight: Novels Are Forever Twenty",
+    "thumbnail": "/images/thumbnails/work16.jpg",
+    "content": {
+      "소개": "<p>AI가 즉각적인 답을 내놓고, 숏폼으로 정보를 소비하는 시대, 그러나 젊은 세대는 역설적으로 다시 책을 펼치고 있다. ‘텍스트힙’ 열풍 속에서 독서는 단순한 취미를 넘어, 자신의 취향과 개성을 드러내는 문화가 됐다. 은희경, 박상영, 예소연 세 작가를 통해 30년 전의 소설을 새롭게 읽는 독자들부터 국경을 넘어 한국소설을 만나는 해외 독자들, AI 시대에도 글을 쓰고 읽는 사람들의 이야기까지 따라가며 한국소설의 현재와 가능성을 들여다본다.</p>\n",
+      "Introduction": "<p>In an era of instant AI answers and bite-sized video content, the younger generation is doing something paradoxically retro: they are opening books. Driven by the \"Text Hip\" trend, reading has transcended being a mere hobby to become a cultural statement—a new way to express one's taste and identity. This documentary explores the present and future potential of Korean literature by following diverse voices: young readers discovering 30-year-old classics through the eyes of authors Eun Hee-kyung, Park Sang-young, and Ye So-yeon; global audiences connecting with Korean stories across borders; and the people who resolutely continue to write and read even in the age of artificial intelligence.</p>\n",
+      "정보": "<li>방송 채널 : KBS 1TV</li>\n<li>편성 : 2026년 6월 18일 22시</li>\n<li>참여 내용 : 연출</li>\n",
+      "Information": "<li>Channel: KBS 1TV</li>\n<li>Schedule: June 18, 2026 · 10:00 PM</li>\n<li>Role: Director</li>\n",
+      "수상": null,
+      "Awards": null,
+      "언론 보도": null,
+      "Press": null,
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/16-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/16-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/16-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
+    }
+  },
+  {
     "id": 2,
     "date": "2019-01-14",
     "category": "방송·영상",
@@ -160,14 +347,37 @@
         {
           "type": "image",
           "src": "/images/work/2-1.jpg",
-          "caption": "〈6시 내고향〉 2019년 2월 11일 방송",
-          "caption_en": "〈Hometown at 6〉 - Episode Broadcast on February 11, 2019"
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
         },
         {
           "type": "image",
           "src": "/images/work/2-2.jpg",
-          "caption": "〈6시 내고향〉 2019년 3월 6일 방송",
-          "caption_en": "〈Hometown at 6〉 - Episode Broadcast on March 6, 2019"
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/2-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/2-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/2-5.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
         }
       ]
     }
@@ -189,7 +399,43 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/3-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/3-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/3-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/3-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/3-5.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -229,7 +475,29 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/5-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/5-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/5-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -249,7 +517,28 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/6-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/6-2.jpg",
+          "alt": "방송 화면",
+          "caption": ""
+        },
+        {
+          "type": "image",
+          "src": "/images/work/6-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -273,12 +562,28 @@
         {
           "type": "image",
           "src": "/images/work/7-1.jpg",
+          "alt": "방송 화면",
           "caption": null,
           "caption_en": null
         },
         {
           "type": "image",
           "src": "/images/work/7-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/7-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/7-4.jpg",
+          "alt": "방송 화면",
           "caption": null,
           "caption_en": null
         }
@@ -302,7 +607,22 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/8-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/8-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   },
   {
@@ -322,7 +642,43 @@
       "Awards": null,
       "언론 보도": null,
       "Press": null,
-      "미디어": null
+      "미디어": [
+        {
+          "type": "image",
+          "src": "/images/work/9-1.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/9-2.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/9-3.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/9-4.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        },
+        {
+          "type": "image",
+          "src": "/images/work/9-5.jpg",
+          "alt": "방송 화면",
+          "caption": null,
+          "caption_en": null
+        }
+      ]
     }
   }
 ]
